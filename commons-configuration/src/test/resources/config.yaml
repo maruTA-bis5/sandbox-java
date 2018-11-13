@@ -1,0 +1,6 @@
+backend:
+    url: http://backend-service
+login:
+    user: john
+    password: pass
+
