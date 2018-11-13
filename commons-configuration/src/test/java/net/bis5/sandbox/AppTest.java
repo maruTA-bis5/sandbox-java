@@ -7,7 +7,6 @@ import org.apache.commons.configuration2.ex.*;
 
 public class AppTest {
 	@Test
-	@Ignore
 	public void testLoadIni() throws ConfigurationException {
 		String fileName = "config.ini";
 
@@ -22,7 +21,6 @@ public class AppTest {
 	@Test
 	public void testLoadProperties() throws ConfigurationException {
 		String fileName = "config.properties";
-		// FIXME なぜかconfig.iniが読み込まれる
 
 		Configuration conf = new App().loadProperties(fileName);
 		conf.getKeys().forEachRemaining(System.err::println);
