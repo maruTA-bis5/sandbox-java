@@ -26,4 +26,12 @@ public class App {
 
 		return builder.getConfiguration();
 	}
+
+	public Configuration loadSystemProperties() throws ConfigurationException {
+		return new SystemConfiguration();
+	}
+
+	public Configuration loadEnvironmentVariables() throws ConfigurationException {
+		return new EnvironmentConfiguration();
+	}
 }
