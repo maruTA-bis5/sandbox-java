@@ -1,0 +1,107 @@
+[1mApache Maven 3.5.2[m
+Maven home: /usr/share/maven
+Java version: 1.8.0_181, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-17134-microsoft", arch: "amd64", family: "unix"
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding ExCella Sandbox 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mexcella-sandbox[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mexcella-sandbox[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mexcella-sandbox[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mexcella-sandbox[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /home/maruyama/sandbox-java/excella-sandbox/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mexcella-sandbox[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/maruyama/sandbox-java/excella-sandbox/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running MergedRegionBRTest
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 12.694 sec <<< FAILURE!
+パターン3(MergedRegionBRTest)  Time elapsed: 0.086 sec  <<< ERROR!
+Sheet[Pattern3] Cell[1,0] Message[java.lang.IllegalArgumentException: There are crossing merged regions in the range.] Cause[java.lang.IllegalArgumentException: There are crossing merged regions in the range.] 
+	at org.bbreak.excella.reports.tag.BlockRowRepeatParamParser.parse(BlockRowRepeatParamParser.java:504)
+	at org.bbreak.excella.reports.tag.ReportsTagParser.parse(ReportsTagParser.java:1)
+	at org.bbreak.excella.core.SheetParser.parseCell(SheetParser.java:134)
+	at org.bbreak.excella.core.SheetParser.parseSheet(SheetParser.java:104)
+	at org.bbreak.excella.core.BookController.parseSheet(BookController.java:251)
+	at org.bbreak.excella.reports.processor.ReportProcessor.processBook(ReportProcessor.java:185)
+	at org.bbreak.excella.reports.processor.ReportProcessor.process(ReportProcessor.java:112)
+	at MergedRegionBRTest.パターン3(MergedRegionBRTest.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.IllegalArgumentException: There are crossing merged regions in the range.
+	at org.bbreak.excella.core.util.PoiUtil.getMergedAddress(PoiUtil.java:722)
+	at org.bbreak.excella.core.util.PoiUtil.copyRange(PoiUtil.java:472)
+	at org.bbreak.excella.core.util.PoiUtil.copyRange(PoiUtil.java:463)
+	at org.bbreak.excella.core.util.PoiUtil.insertRangeDown(PoiUtil.java:571)
+	at org.bbreak.excella.reports.tag.BlockRowRepeatParamParser.parse(BlockRowRepeatParamParser.java:476)
+	... 36 more
+
+
+Results :
+
+Tests in error: 
+  パターン3(MergedRegionBRTest): java.lang.IllegalArgumentException: There are crossing merged regions in the range.
+
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 14.703 s
+[[1;34mINFO[m] Finished at: 2018-11-28T11:37:44Z
+[[1;34mINFO[m] Final Memory: 15M/157M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.12.4:test[m [1m(default-test)[m on project [36mexcella-sandbox[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /home/maruyama/sandbox-java/excella-sandbox/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
