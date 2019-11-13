@@ -9,11 +9,21 @@ public class S1948App2 implements Serializable {
 
     private final TreeNode finalRootNode = new DefaultTreeNode("root node", null);
 
+    private TreeNode modifiableRootNode = new DefaultTreeNode("root node", null);
+
     public TreeNode getRootNode() {
         return rootNode;
     }
 
     public TreeNode getFinalRootNode() {
         return finalRootNode;
+    }
+
+    public TreeNode getModifiableRootNode() {
+        return modifiableRootNode;
+    }
+
+    public void setModifiableRootNode(TreeNode node) {
+        this.modifiableRootNode = node;
     }
 }
