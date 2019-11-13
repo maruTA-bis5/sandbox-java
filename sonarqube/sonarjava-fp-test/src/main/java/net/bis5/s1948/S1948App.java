@@ -3,9 +3,10 @@ package net.bis5.s1948;
 import javax.inject.Inject;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
+import java.io.Serializable;
 
 @SessionScoped
-public class S1948App {
+public class S1948App implements Serializable {
 
     /** Field injection */
     @Inject CdiManagedBean field1;
